@@ -1,0 +1,18 @@
+extends layout
+
+block stylesheets
+    link(rel='stylesheet', href='/stylesheets/projects.css')
+
+block content
+    for project in projects
+        div.project
+            h1 #{project.projectType}
+            h2= project.projectTitle
+            p Topics Covered:
+            ul.topics-covered
+                for topic in project.topicsCovered
+                    li= topic
+            p Additional Details:
+            ul.additional-details
+                for detail in project.additionalDetails
+                    li= detail

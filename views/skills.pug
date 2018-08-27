@@ -1,0 +1,11 @@
+extends layout
+
+block stylesheets
+    link(rel='stylesheet' href='/stylesheets/skills.css')
+
+block content
+    div#programming-skills.skills
+        p Programming Skills:
+        ul
+            for progSkill in programming
+                li= progSkill

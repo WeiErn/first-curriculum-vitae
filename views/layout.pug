@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block stylesheets
+  body
+    nav
+      h1.nav-option
+        a(href='/') Wei Ern
+      h2.nav-option
+        a(href="/Education") Education
+      h2.nav-option
+        a(href="/Projects") Projects
+      h2.nav-option
+        a(href="/Skills") Skills
+      h2.nav-option
+        a(href='/Contact') Contact Me
+    main
+      block content

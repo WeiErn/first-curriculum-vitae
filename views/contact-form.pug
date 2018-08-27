@@ -1,0 +1,24 @@
+extends layout
+
+block stylesheets
+    link(rel='stylesheet' href='./stylesheets/contact-form.css')
+
+block content
+    h1= title
+
+    form(method='POST' action='')
+        div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='abc' name='name')
+        div.form-group
+            label(for='email') Email:
+            input#email.form-control(type='email', placeholder='abc@email.com' name='email')
+        div.form-group
+            label(for='message') Message:
+            textarea#message.form-control(placeholder='Type your message here' name='message')
+        button.btn.btn-primary(type='submit') Submit
+
+    if errors
+        ul
+            for error in errors
+                li!= error.msg

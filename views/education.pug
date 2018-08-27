@@ -1,0 +1,25 @@
+extends layout
+
+block stylesheets
+    link(rel='stylesheet', href='/stylesheets/education.css')
+
+block content
+    div(id='pre-uni' class='education-stage')
+        h1 #{preUni.school}
+        h2 #{preUni.start} - #{preUni.end}
+        span Courses Taken:
+            ul
+                each course in preUni.courses
+                    li= course
+
+    // - uniStyle = {'margin-top': '50px'};
+    //div(id='uni' class='education-stage' style=uniStyle)
+    div(id='uni' class='education-stage' style=uniStyle)
+        h1 #{uni.school}
+        h2 #{uni.start} - #{uni.end}
+        h2 Major: #{uni.major}
+        span Courses Taken:
+            ul
+                each course in uni.courses
+                    li= course
+                li and more...

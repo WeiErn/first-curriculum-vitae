@@ -1,0 +1,17 @@
+.form-group {
+    margin: 20px 0;
+}
+
+label:nth-child(-n + 2) {
+    margin-right: 5px;
+}
+
+label[for='message'] {
+    display: block;
+    padding: 0 0 10px;
+}
+
+textarea {
+    width: 20%;
+    min-height: 45px;
+}
